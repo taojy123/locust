@@ -175,7 +175,7 @@ class User(object, metaclass=UserMeta):
         :returns: True if the greenlet was killed immediately, otherwise False
         """
         if force or self._state == LOCUST_STATE_WAITING:
-            gevent_group.killone(self._greenlet)
+            gevent_group.killone(self._greenlet, block=False)
             return True
         elif self._state == LOCUST_STATE_RUNNING:
             self._state = LOCUST_STATE_STOPPING

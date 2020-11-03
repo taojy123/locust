@@ -4,6 +4,38 @@ Changelog Highlights
 
 For full details of the Locust changelog, please see https://github.com/locustio/locust/blob/master/CHANGELOG.md
 
+1.3.2
+=====
+
+* List Python 3.9 as supported in the package/on PyPi
+* Fix XSS vulnerability in the web UI (sounds important but really isn't, as Locust UI is not meant to be exposed to outside users)
+
+1.3.1
+=====
+
+* Bump minimum required gevent version to 20.9.0 (latest), as the previous ones had sneaky binary incompatibilities with the latest version of greenlet ("RuntimeWarning: greenlet.greenlet size changed, may indicate binary incompatibility. Expected 144 from C header, got 152 from PyObject")
+
+1.3.0
+=====
+
+* Breaking change: Remove step-load feature (now that we have LoadTestShape it is no longer needed)
+* More type hints to enable better code completion and linting of locustfiles
+
+Bug fixes: 
+
+* LoadTestShape.get\_run\_time is not relative to start of test https://github.com/locustio/locust/issues/1557
+* Refactor and fix delayed user stopping in combination with on\_stop https://github.com/locustio/locust/pull/1560
+* runner.quit gets blocked by slow on stop https://github.com/locustio/locust/issues/1552
+* Remove legacy code that was only needed for py2
+* Lots more
+
+1.2.3
+=====
+
+* Bug fix (TypeError: code() takes at least 14 arguments (13 given) (Werkzeug version issue) https://github.com/locustio/locust/issues/1545)
+* Bug fix (Locust stuck in "Shape worker starting" when restarting a test from the webUI https://github.com/locustio/locust/issues/1540)
+* Various linting fixes that *should* have no functional impact
+
 1.2.2
 =====
 

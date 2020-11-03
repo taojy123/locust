@@ -1,5 +1,77 @@
 # Changelog
 
+## [1.3.2](https://github.com/locustio/locust/tree/1.3.2) (2020-11-02)
+
+[Full Changelog](https://github.com/locustio/locust/compare/1.3.1...1.3.2)
+
+**Merged pull requests:**
+
+- Run builds for python 3.9 [\#1607](https://github.com/locustio/locust/pull/1607) ([cyberw](https://github.com/cyberw))
+- Add note and link to k8s Helm chart [\#1606](https://github.com/locustio/locust/pull/1606) ([max-rocket-internet](https://github.com/max-rocket-internet))
+- Replace '\<' and '\>' for swarm 'host' field. Fix for XSS attack. [\#1603](https://github.com/locustio/locust/pull/1603) ([lhupfeldt](https://github.com/lhupfeldt))
+
+## [1.3.1](https://github.com/locustio/locust/tree/1.3.1) (2020-10-15)
+
+[Full Changelog](https://github.com/locustio/locust/compare/1.3.0...1.3.1)
+
+## [1.3.0](https://github.com/locustio/locust/tree/1.3.0) (2020-10-12)
+
+[Full Changelog](https://github.com/locustio/locust/compare/1.2.3...1.3.0)
+
+**Fixed bugs:**
+
+- After starting and then stopping a load test, master is updating state in a loop [\#1577](https://github.com/locustio/locust/issues/1577)
+- Misleading log message in distributed mode [\#1572](https://github.com/locustio/locust/issues/1572)
+- LoadTestShape.get\_run\_time is not relative to start of test [\#1557](https://github.com/locustio/locust/issues/1557)
+- On Stop causes the task to continue [\#1552](https://github.com/locustio/locust/issues/1552)
+
+**Closed issues:**
+
+- Remove step load feature now that LoadTestShape is possible? [\#1575](https://github.com/locustio/locust/issues/1575)
+- Add ability to easily extend Locust web UI [\#1530](https://github.com/locustio/locust/issues/1530)
+- Type hinting for common functions [\#1260](https://github.com/locustio/locust/issues/1260)
+
+**Merged pull requests:**
+
+- Start web\_ui later to avoid race adding UI routes [\#1585](https://github.com/locustio/locust/pull/1585) ([solowalker27](https://github.com/solowalker27))
+- Remove step load feature [\#1584](https://github.com/locustio/locust/pull/1584) ([max-rocket-internet](https://github.com/max-rocket-internet))
+- Add more type hints [\#1582](https://github.com/locustio/locust/pull/1582) ([cyberw](https://github.com/cyberw))
+- Run time relative to start when using LoadTestShape [\#1581](https://github.com/locustio/locust/pull/1581) ([DennisKrone](https://github.com/DennisKrone))
+- Don't log state change if it's the same [\#1580](https://github.com/locustio/locust/pull/1580) ([max-rocket-internet](https://github.com/max-rocket-internet))
+- SequentialTaskSet improvements [\#1579](https://github.com/locustio/locust/pull/1579) ([cyberw](https://github.com/cyberw))
+- Fixed documentation for tags to link properly. [\#1578](https://github.com/locustio/locust/pull/1578) ([Trouv](https://github.com/Trouv))
+- More easily extend web UI [\#1574](https://github.com/locustio/locust/pull/1574) ([solowalker27](https://github.com/solowalker27))
+- Only warn about open file limit when not running as master [\#1573](https://github.com/locustio/locust/pull/1573) ([parberge](https://github.com/parberge))
+- Adding more debug logging for runners.py [\#1570](https://github.com/locustio/locust/pull/1570) ([max-rocket-internet](https://github.com/max-rocket-internet))
+- Add friendlier message about expected limit [\#1566](https://github.com/locustio/locust/pull/1566) ([parberge](https://github.com/parberge))
+- Update documentation for schedule\_task parameters in TaskSet \(task.py\) [\#1565](https://github.com/locustio/locust/pull/1565) ([kmels](https://github.com/kmels))
+- Added comment for clarity [\#1561](https://github.com/locustio/locust/pull/1561) ([raiyankamal](https://github.com/raiyankamal))
+- Refactor and fix delayed user stopping in combination with on\_stop [\#1560](https://github.com/locustio/locust/pull/1560) ([cyberw](https://github.com/cyberw))
+- Remove legacy code that was only needed for py2 [\#1559](https://github.com/locustio/locust/pull/1559) ([cyberw](https://github.com/cyberw))
+- Clean up code and tighten flake8 linting [\#1558](https://github.com/locustio/locust/pull/1558) ([cyberw](https://github.com/cyberw))
+
+## [1.2.3](https://github.com/locustio/locust/tree/1.2.3) (2020-08-28)
+
+[Full Changelog](https://github.com/locustio/locust/compare/1.2.2...1.2.3)
+
+**Fixed bugs:**
+
+- Unable to install packages using pip [\#1548](https://github.com/locustio/locust/issues/1548)
+- Cant start: Werkzeug: TypeError: code\(\) takes at least 14 arguments \(13 given\) [\#1545](https://github.com/locustio/locust/issues/1545)
+- use\_as\_lib.py example getting stuck when running [\#1542](https://github.com/locustio/locust/issues/1542)
+- Locust stuck in "Shape worker starting" when restarting a test from the webUI [\#1540](https://github.com/locustio/locust/issues/1540)
+
+**Closed issues:**
+
+- Let's fix code to be PEP8 compliant? [\#1489](https://github.com/locustio/locust/issues/1489)
+
+**Merged pull requests:**
+
+- Various linting fixes [\#1549](https://github.com/locustio/locust/pull/1549) ([cyberw](https://github.com/cyberw))
+- Reformat code using black. Also add black --check to build. [\#1547](https://github.com/locustio/locust/pull/1547) ([cyberw](https://github.com/cyberw))
+- fix use\_as\_lib example [\#1543](https://github.com/locustio/locust/pull/1543) ([taojy123](https://github.com/taojy123))
+- Fix stopping and restarting of LoadTestShape test [\#1541](https://github.com/locustio/locust/pull/1541) ([max-rocket-internet](https://github.com/max-rocket-internet))
+
 ## [1.2.2](https://github.com/locustio/locust/tree/1.2.2) (2020-08-22)
 
 [Full Changelog](https://github.com/locustio/locust/compare/1.2.1...1.2.2)
@@ -1397,7 +1469,6 @@
 - Fixed Docs Homebrew Link [\#143](https://github.com/locustio/locust/pull/143) ([saulshanabrook](https://github.com/saulshanabrook))
 - Fix typo [\#132](https://github.com/locustio/locust/pull/132) ([rafax](https://github.com/rafax))
 - Fix task ratio [\#125](https://github.com/locustio/locust/pull/125) ([sanga](https://github.com/sanga))
-- fix typo in downloadable CSV [\#100](https://github.com/locustio/locust/pull/100) ([sghill](https://github.com/sghill))
 
 ## [v0.7](https://github.com/locustio/locust/tree/v0.7) (2014-01-20)
 
@@ -1450,6 +1521,7 @@
 - fix module and variable name clash \(traceback refers to a mod so it's a ... [\#115](https://github.com/locustio/locust/pull/115) ([sanga](https://github.com/sanga))
 - Removes duplicate attribute documentation [\#106](https://github.com/locustio/locust/pull/106) ([djoume](https://github.com/djoume))
 - Fixes typo in example code [\#105](https://github.com/locustio/locust/pull/105) ([djoume](https://github.com/djoume))
+- fix typo in downloadable CSV [\#100](https://github.com/locustio/locust/pull/100) ([sghill](https://github.com/sghill))
 - Documented more 0.7 changes [\#90](https://github.com/locustio/locust/pull/90) ([EnTeQuAk](https://github.com/EnTeQuAk))
 - include hostname in log messages [\#89](https://github.com/locustio/locust/pull/89) ([sanga](https://github.com/sanga))
 - Cleanups \(deprecated code, unused imports\) [\#88](https://github.com/locustio/locust/pull/88) ([EnTeQuAk](https://github.com/EnTeQuAk))

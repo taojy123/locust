@@ -1,13 +1,15 @@
 import time
+from typing import Optional, Tuple
 
 
-class LoadTestShape(object):
+class LoadTestShape:
     """
     A simple load test shape class used to control the shape of load generated
     during a load test.
     """
 
-    start_time = time.monotonic()
+    def __init__(self):
+        self.start_time = time.monotonic()
 
     def reset_time(self):
         """
@@ -21,7 +23,7 @@ class LoadTestShape(object):
         """
         return time.monotonic() - self.start_time
 
-    def tick(self):
+    def tick(self) -> Optional[Tuple[int, float]]:
         """
         Returns a tuple with 2 elements to control the running load test:
 
